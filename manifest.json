@@ -10,7 +10,7 @@
     "permissions": ["tabs","activeTab"],
     "content_scripts": [
         {
-            "matches": ["https://forocoches.com/foro/forumdisplay.php?f=*"],
+            "matches": ["https://forocoches.com/foro/forumdisplay.php?f=2*"],
             "js": ["blocker-script.js"]
         }
     ],
