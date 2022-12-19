@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(function (response, sendResponse) {
 
 
 function applyChanges(){
-    let body = document.getElementById("threadbits_forum_8")
+    let body = document.getElementById("threadbits_forum_2")
     if(mode !== 2){
         for (let idx = 0; idx < body.children.length; idx++) {
             const title = body.children[idx].children[2].getAttribute("title")
