@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "free forocarros",
+    "description": "Frees our forum from social media bs",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["tabs","activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://forocoches.com/foro/forumdisplay.php?f=*"],
+            "js": ["blocker-script.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "listener.js"
+    },
+    "commands": {
+        "mode": {
+            "suggested_key": {
+                "default": "Ctrl+M"
+            },
+            "description": "Switch mode"
+        }
+    } 
+  }
