@@ -7,10 +7,10 @@
       "default_popup": "index.html",
       "default_icon": "icon.png"
     },
-    "permissions": ["tabs","activeTab"],
+    "permissions": [ "storage","tabs","activeTab","webRequest", "declarativeNetRequest"],
     "content_scripts": [
         {
-            "matches": ["https://forocoches.com/foro/forumdisplay.php?f=2*"],
+            "matches": ["https://forocoches.com/foro/forumdisplay.php?f=*","https://forocoches.com/foro/showthread.php?*"],
             "js": ["blocker-script.js"]
         }
     ],
@@ -24,5 +24,8 @@
             },
             "description": "Switch mode"
         }
-    } 
+    },
+    "host_permissions": [
+        "*://forocoches.com/*"
+    ]
   }
