@@ -7,15 +7,15 @@
       "default_popup": "index.html",
       "default_icon": "icon.png"
     },
-    "permissions": [ "storage","tabs","activeTab","webRequest", "declarativeNetRequest"],
+    "permissions": [ "storage","tabs","activeTab", "declarativeNetRequest"],
     "content_scripts": [
         {
             "matches": ["https://forocoches.com/foro/forumdisplay.php?f=*","https://forocoches.com/foro/showthread.php?*"],
-            "js": ["blocker-script.js"]
+            "js": ["content.js"]
         }
     ],
     "background": {
-        "service_worker": "listener.js"
+        "service_worker": "background.js"
     },
     "commands": {
         "mode": {
