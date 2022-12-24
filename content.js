@@ -3,8 +3,6 @@ chrome.runtime.onMessage.addListener((response, sendResponse) => {
 });
 
 chrome.storage.sync.get("mode", (m) => {
-
-  console.log("hi")
   applyChanges(m.mode)
 });
 
