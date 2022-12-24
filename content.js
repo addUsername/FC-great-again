@@ -2,6 +2,12 @@ chrome.runtime.onMessage.addListener((response, sendResponse) => {
   applyChanges(response);
 });
 
+chrome.storage.sync.get("mode", (m) => {
+
+  console.log("hi")
+  applyChanges(m.mode)
+});
+
 function applyChanges(mode) {
   if (window.location.href.includes("forumdisplay")) {
     if (mode === 2) {

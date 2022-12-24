@@ -61,6 +61,8 @@ function block() {
 function unblock() {
   chrome.declarativeNetRequest.updateDynamicRules(
     { removeRuleIds: [ruleID] },
-    () => //console.log("rule removed")
+    () => {
+      //console.log("rule removed")
+    }
   );
 }
